@@ -106,7 +106,7 @@ export default function App() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-gray-500">WEB:</span> 
-                <a href="https://sasiad.com" target="_blank" rel="noreferrer" className="hover:text-cachy-green transition-colors">sasiad.com</a>
+                <a href="https://sasiad.de" target="_blank" rel="noreferrer" className="hover:text-cachy-green transition-colors">sasiad.de</a>
               </div>
             </div>
           </div>
