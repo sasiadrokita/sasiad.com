@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --color-cachy-bg: #0d1117;
+  --color-cachy-surface: #161b22;
+  --color-cachy-border: #30363d;
+  --color-cachy-green: #2ea043;
+  --color-cachy-green-glow: rgba(46, 160, 67, 0.4);
+  --color-cachy-cyan: #38bdf8;
+}
+
+@layer base {
+  body {
+    @apply bg-cachy-bg text-gray-200 font-sans antialiased overflow-hidden;
+  }
+}
+
+/* Custom scrollbar for terminal vibe */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2ea043;
+}
