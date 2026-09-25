@@ -87,7 +87,8 @@ export default function App() {
           <div className="text-gray-300 space-y-2 max-w-2xl bg-black/40 p-4 rounded border border-cachy-cyan backdrop-blur-md">
             <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2"><Briefcase size={20} className="text-cachy-cyan" /> Current Assignment</h3>
             <div className="text-cachy-green font-bold">Company: endiso GmbH</div>
-            <div className="text-gray-400">Location: Föhren, Deutschland</div>
+            <div className="text-gray-400">Location: F�hren, Deutschland</div>
+              <div className="text-gray-400">Email: mateusz.nowak@endiso.de</div>
             <div className="mt-3 border-t border-white/10 pt-3 text-sm leading-relaxed">
               <strong>Roles:</strong> IT Head, Technician, Support, endisoKicker Admin, Warehouse Manager.
               <div className="italic text-gray-500 mt-1">(Guinea pig - Experimental Division)</div>
@@ -101,7 +102,11 @@ export default function App() {
             <h3 className="text-lg font-bold text-white mb-3">Communication Channels</h3>
             <div className="flex flex-col gap-3 font-mono text-cachy-cyan">
               <div className="flex items-center gap-3">
-                <span className="text-gray-500">EMAIL:</span> 
+                <span className="text-gray-500">PHONE:</span> 
+                  <a href="tel:+491711110639" className="hover:text-cachy-green transition-colors">+49 171 111 06 39</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-gray-500">EMAIL:</span> 
                 <a href="mailto:mateusz.nowak.zabrze@gmail.com" className="hover:text-cachy-green transition-colors">mateusz.nowak.zabrze@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
