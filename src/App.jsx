@@ -176,7 +176,7 @@ export default function App() {
             <div>
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2"><Cpu size={20} className="text-cachy-cyan" /> KI-Trading-Bot</h3>
               <p className="mb-2 text-sm">
-                Vernetzter KI-Agent auf einem Edge-Device zur autonomen Verarbeitung von Marktdaten und Entscheidungsfindung. Integration von LLMs für intelligente Systembenachrichtigungen.
+                Networked AI agent on an edge device for autonomous processing of market data and decision-making. Integration of LLMs for intelligent system notifications.
               </p>
               <div className="flex gap-2 font-mono text-xs text-cachy-green">
                 <span className="bg-cachy-green/10 px-2 py-1 rounded border border-cachy-green/30">Raspberry Pi</span>
@@ -188,7 +188,7 @@ export default function App() {
             <div className="border-t border-white/10 pt-4">
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2"><Activity size={20} className="text-yellow-500" /> PV-Monitoring-Server</h3>
               <p className="mb-2 text-sm">
-                Containerisierter Server auf einem Edge-Device zur Erfassung von Live-Telemetriedaten über Modbus RTU-Protokolle. Validierung der Datenströme und Echtzeit-Visualisierung.
+                Containerized server on an edge device for capturing live telemetry data via Modbus RTU protocols. Validation of data streams and real-time visualization.
               </p>
               <div className="flex gap-2 font-mono text-xs text-yellow-500">
                 <span className="bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/30">Modbus RTU</span>
@@ -410,13 +410,14 @@ export default function App() {
                   Mateusz Nowak
                 </h2>
                 <div className="text-gray-300 font-mono text-xs sm:text-sm tracking-wider mb-4 leading-relaxed">
-                  <div>Travel ✈️ • Swim 🏊‍♂️ • Tech 💻</div>
-                  <div>Crypto & Trading 📈 • Books 📚</div>
                   <div className="text-cachy-cyan font-bold mt-1">🌐 IT & Digital Networking</div>
+                    <div>Travel ✈️ • Swim 🏊‍♂️ • Tech 💻</div>
+                  <div>Crypto & Trading 📈 • Books 📚</div>
+                  
                 </div>
                 <div className="flex flex-wrap justify-center sm:justify-start gap-3 font-sans text-sm text-gray-300">
                   <span className="bg-black/30 px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2 backdrop-blur-sm">
-                    <Activity size={14} className="text-cachy-cyan" /> +49 171 111 06 39
+                    <Map size={14} className="text-cachy-cyan" /> Slask, Poland
                   </span>
                   <span className="bg-black/30 px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2 backdrop-blur-sm">
                     <Map size={14} className="text-cachy-cyan" /> Saarland, Germany
