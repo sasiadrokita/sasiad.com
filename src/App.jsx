@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Terminal as TerminalIcon, Wallet, Activity, Map, Cpu, Image as ImageIcon, Briefcase, User, Hash, Mail, Music, Building, FolderGit2 } from 'lucide-react';
+import { Terminal as TerminalIcon, Wallet, Activity, Map, Cpu, Image as ImageIcon, Briefcase, User, Hash, Mail, Music, Building, FolderGit2 , Menu} from 'lucide-react';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -281,7 +281,7 @@ export default function App() {
     }
   };
 
-  const runMacro = (cmd) => {
+  const runMacro = (cmd) => { setIsSidebarOpen(false);
     if (isTypingMacro) return;
     setIsTypingMacro(true);
     setInput('');
@@ -302,7 +302,7 @@ export default function App() {
   };
 
   return (
-    <div className="h-[100dvh] w-full bg-black text-gray-200 font-sans relative overflow-hidden flex" onClick={() => inputRef.current?.focus()}>
+    <div className="fixed inset-0 w-full bg-black text-gray-200 font-sans overflow-hidden flex">
       
       {/* Background Video */}
       <video 
@@ -316,12 +316,10 @@ export default function App() {
       </video>
 
       {/* Glass Sidebar (Collapsible) */}
-      <motion.div 
-        initial={{ width: 64 }}
-        animate={{ width: isSidebarOpen ? 240 : 64 }}
+      <div 
         onMouseEnter={() => setIsSidebarOpen(true)}
         onMouseLeave={() => setIsSidebarOpen(false)}
-        className="bg-black/30 backdrop-blur-xl border-r border-white/10 z-20 flex-col flex absolute sm:relative h-full shrink-0 transition-all duration-300"
+        className={`bg-black/90 sm:bg-black/30 backdrop-blur-xl border-r border-white/10 z-50 flex-col flex shrink-0 transition-all duration-300 absolute sm:relative h-full top-0 left-0 ${isSidebarOpen ? 'w-[240px] translate-x-0' : 'w-[64px] -translate-x-full sm:translate-x-0'}`}
       >
         <div className="p-4 border-b border-white/10 flex items-center h-[73px]">
           <Cpu size={28} className="text-cachy-cyan drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] shrink-0 ml-1" />
@@ -374,10 +372,10 @@ export default function App() {
             <span className={`ml-4 font-mono text-sm whitespace-nowrap transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0'}`}>contact</span>
           </button>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Terminal Area */}
-      <div className="flex-1 flex flex-col relative z-10 p-2 sm:p-8 pl-[72px] sm:pl-8 max-w-6xl mx-auto w-full">
+      <div className="flex-1 flex flex-col relative z-10 p-2 sm:p-8 max-w-6xl mx-auto w-full pt-safe pb-safe">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -387,12 +385,15 @@ export default function App() {
           {/* Terminal Header Bar */}
           <div className="bg-white/5 px-4 py-3 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2 font-mono text-xs text-gray-400">
+              <button onClick={(e) => { e.stopPropagation(); setIsSidebarOpen(!isSidebarOpen); }} className="sm:hidden p-1 mr-2 text-cachy-cyan hover:text-white bg-white/5 rounded">
+                <Menu size={16} />
+              </button>
               <TerminalIcon size={14} className="text-cachy-green" /> root@mateusz-network: ~
             </div>
           </div>
           
           {/* Interactive Terminal */}
-          <div className="p-4 sm:p-6 flex-1 overflow-y-auto font-mono text-sm sm:text-base scroll-smooth">
+          <div className="p-4 sm:p-6 flex-1 overflow-y-auto font-mono text-sm sm:text-base scroll-smooth" onClick={() => inputRef.current?.focus()}>
 
             {/* Static Profile Section */}
           <div className="border-b border-white/10 bg-gradient-to-b from-white/5 to-transparent pb-6 mb-6 -mx-4 sm:-mx-6 px-4 sm:px-6 pt-2">
