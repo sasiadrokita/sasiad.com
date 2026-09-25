@@ -155,9 +155,6 @@ export default function App() {
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><FaInstagram className="text-pink-500" /> Instagram Feed</h3>
             <p className="text-gray-400 text-sm mb-4">Photos have been moved to Instagram. Check out the latest updates there!</p>
             <div className="elfsight-app-aead15a8-9500-4c43-afe4-38ec7cfc512c" data-elfsight-app-lazy></div>
-              <div className="bg-white/10 aspect-square rounded flex items-center justify-center"><ImageIcon size={24} className="text-white/30" /></div>
-              <div className="bg-white/10 aspect-square rounded flex items-center justify-center"><ImageIcon size={24} className="text-white/30" /></div>
-            </div>
             <a href="https://www.instagram.com/mateusz.nowak.zabrze" target="_blank" rel="noreferrer" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-4 py-2 rounded shadow-lg hover:shadow-[0_0_15px_rgba(236,72,153,0.6)] transition-all">
               @mateusz.nowak.zabrze
             </a>
