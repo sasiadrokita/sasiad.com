@@ -315,10 +315,18 @@ export default function App() {
         <source src={bgVideo} type="video/mp4" />
       </video>
 
+      {/* Mobile Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="sm:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Glass Sidebar (Collapsible) */}
       <div 
-        onMouseEnter={() => setIsSidebarOpen(true)}
-        onMouseLeave={() => setIsSidebarOpen(false)}
+        onMouseEnter={() => window.innerWidth >= 640 && setIsSidebarOpen(true)}
+          onMouseLeave={() => window.innerWidth >= 640 && setIsSidebarOpen(false)}
         className={`bg-black/90 sm:bg-black/30 backdrop-blur-xl border-r border-white/10 z-50 flex-col flex shrink-0 transition-all duration-300 absolute sm:relative h-full top-0 left-0 ${isSidebarOpen ? 'w-[240px] translate-x-0' : 'w-[64px] -translate-x-full sm:translate-x-0'}`}
       >
         <div className="p-4 border-b border-white/10 flex items-center h-[73px]">
