@@ -154,8 +154,7 @@ export default function App() {
           <div className="bg-black/50 p-4 rounded border border-white/10 max-w-lg backdrop-blur-md">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"><FaInstagram className="text-pink-500" /> Instagram Feed</h3>
             <p className="text-gray-400 text-sm mb-4">Photos have been moved to Instagram. Check out the latest updates there!</p>
-            <div className="grid grid-cols-3 gap-2 mb-4 opacity-70">
-              <div className="bg-white/10 aspect-square rounded flex items-center justify-center"><ImageIcon size={24} className="text-white/30" /></div>
+            <div className="elfsight-app-aead15a8-9500-4c43-afe4-38ec7cfc512c" data-elfsight-app-lazy></div>
               <div className="bg-white/10 aspect-square rounded flex items-center justify-center"><ImageIcon size={24} className="text-white/30" /></div>
               <div className="bg-white/10 aspect-square rounded flex items-center justify-center"><ImageIcon size={24} className="text-white/30" /></div>
             </div>
@@ -168,18 +167,8 @@ export default function App() {
       case 'media':
         newHistory.push({ type: 'output', content: (
           <div className="bg-black/50 p-4 rounded border border-white/10 max-w-lg backdrop-blur-md">
-            <h3 className="text-xl font-bold text-white mb-3">Road Trip Energy</h3>
-            <iframe 
-              style={{ borderRadius: '12px' }} 
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" 
-              width="100%" 
-              height="352" 
-              frameBorder="0" 
-              allowFullScreen="" 
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy"
-              className="opacity-90 hover:opacity-100 transition-opacity"
-            ></iframe>
+            <h3 className="text-xl font-bold text-white mb-3">AHHHHH Playlist</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLIsOCqTbZxF0mgJsxbaulUHKBaWVT7X9o" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-xl border border-white/10 opacity-90 hover:opacity-100 transition-opacity"></iframe>
           </div>
         )});
         break;
