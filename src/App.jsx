@@ -302,7 +302,7 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen w-full bg-black text-gray-200 font-sans relative overflow-hidden flex" onClick={() => inputRef.current?.focus()}>
+    <div className="h-[100dvh] w-full bg-black text-gray-200 font-sans relative overflow-hidden flex" onClick={() => inputRef.current?.focus()}>
       
       {/* Background Video */}
       <video 
@@ -321,7 +321,7 @@ export default function App() {
         animate={{ width: isSidebarOpen ? 240 : 64 }}
         onMouseEnter={() => setIsSidebarOpen(true)}
         onMouseLeave={() => setIsSidebarOpen(false)}
-        className="bg-black/30 backdrop-blur-xl border-r border-white/10 z-20 flex-col hidden sm:flex shrink-0 transition-all duration-300"
+        className="bg-black/30 backdrop-blur-xl border-r border-white/10 z-20 flex-col flex absolute sm:relative h-full shrink-0 transition-all duration-300"
       >
         <div className="p-4 border-b border-white/10 flex items-center h-[73px]">
           <Cpu size={28} className="text-cachy-cyan drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] shrink-0 ml-1" />
@@ -377,7 +377,7 @@ export default function App() {
       </motion.div>
 
       {/* Main Terminal Area */}
-      <div className="flex-1 flex flex-col relative z-10 p-4 sm:p-8 max-w-6xl mx-auto w-full">
+      <div className="flex-1 flex flex-col relative z-10 p-2 sm:p-8 pl-[72px] sm:pl-8 max-w-6xl mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -391,19 +391,22 @@ export default function App() {
             </div>
           </div>
           
-          {/* Static Profile Section */}
-          <div className="p-6 border-b border-white/10 bg-gradient-to-b from-white/5 to-transparent">
+          {/* Interactive Terminal */}
+          <div className="p-4 sm:p-6 flex-1 overflow-y-auto font-mono text-sm sm:text-base scroll-smooth">
+
+            {/* Static Profile Section */}
+          <div className="border-b border-white/10 bg-gradient-to-b from-white/5 to-transparent pb-6 mb-6 -mx-4 sm:-mx-6 px-4 sm:px-6 pt-2">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
               <div className="relative group shrink-0">
                 <div className="absolute inset-0 bg-cachy-cyan rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
                 <img 
                   src="/avatar.png" 
                   alt="Mateusz Nowak" 
-                  className="w-24 h-24 sm:w-32 sm:h-32 rounded-xl border-2 border-cachy-cyan/50 p-1 relative z-10 object-cover shadow-2xl" 
+                  className="w-20 h-20 sm:w-32 sm:h-32 rounded-xl border-2 border-cachy-cyan/50 p-1 relative z-10 object-cover shadow-2xl" 
                 />
               </div>
               <div className="text-center sm:text-left mt-2 sm:mt-0 flex-1">
-                <h2 className="text-3xl sm:text-5xl font-mono font-bold text-transparent bg-clip-text bg-gradient-to-r from-cachy-green to-cachy-cyan tracking-tighter drop-shadow-[0_0_10px_rgba(46,160,67,0.5)] uppercase mb-2">
+                <h2 className="text-2xl sm:text-5xl font-mono font-bold text-transparent bg-clip-text bg-gradient-to-r from-cachy-green to-cachy-cyan tracking-tighter drop-shadow-[0_0_10px_rgba(46,160,67,0.5)] uppercase mb-2">
                   Mateusz Nowak
                 </h2>
                 <div className="text-gray-300 font-mono text-xs sm:text-sm tracking-wider mb-4 leading-relaxed">
@@ -423,8 +426,7 @@ export default function App() {
             </div>
           </div>
           
-          {/* Interactive Terminal */}
-          <div className="p-6 flex-1 overflow-y-auto font-mono text-sm sm:text-base scroll-smooth">
+          
             
             <div className="mb-6 text-cachy-cyan drop-shadow-[0_0_5px_rgba(56,189,248,0.5)]">
               <span className="text-cachy-green mr-2">▶</span> 
